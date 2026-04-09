@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
        <footer className="py-8 px-4 border-t"> 
         <div className="max-w-6xl mx-auto flex justify-center items-center flex-col gap-4">
           <p className="text-stone-500 text-sm">
-            Made with ❤️ by Vansh and Rohan. All rights reserved.
+            Made with ❤️ by Vansh. All rights reserved.
           </p>
 
         </div>
