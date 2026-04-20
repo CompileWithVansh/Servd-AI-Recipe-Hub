@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * resipe controller
+ * recipe controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::resipe.resipe');
+module.exports = createCoreController('api::recipe.recipe');

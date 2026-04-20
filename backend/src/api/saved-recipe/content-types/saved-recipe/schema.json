@@ -20,10 +20,10 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "saved_recipes"
     },
-    "resipe": {
+    "recipe": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::resipe.resipe",
+      "target": "api::recipe.recipe",
       "inversedBy": "saved_recipes"
     }
   }

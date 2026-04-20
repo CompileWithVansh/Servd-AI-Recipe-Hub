@@ -501,12 +501,12 @@ export interface ApiPantryItemPantryItem extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiResipeResipe extends Struct.CollectionTypeSchema {
-  collectionName: 'resipes';
+export interface ApiRecipeRecipe extends Struct.CollectionTypeSchema {
+  collectionName: 'recipes';
   info: {
-    displayName: 'Resipe';
-    pluralName: 'resipes';
-    singularName: 'resipe';
+    displayName: 'Recipe';
+    pluralName: 'recipes';
+    singularName: 'recipe';
   };
   options: {
     draftAndPublish: true;
@@ -552,14 +552,14 @@ export interface ApiResipeResipe extends Struct.CollectionTypeSchema {
     description: Schema.Attribute.Blocks;
     imageUrl: Schema.Attribute.String;
     ingredients: Schema.Attribute.JSON & Schema.Attribute.Required;
-    instructions: Schema.Attribute.JSON & Schema.Attribute.Required;
+    instructions: Schema.Attribute.JSON;
     isPublic: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::resipe.resipe'
+      'api::recipe.recipe'
     > &
       Schema.Attribute.Private;
     nutrition: Schema.Attribute.JSON;
@@ -570,7 +570,7 @@ export interface ApiResipeResipe extends Struct.CollectionTypeSchema {
       'api::saved-recipe.saved-recipe'
     >;
     servings: Schema.Attribute.Integer;
-    substitution: Schema.Attribute.JSON;
+    substitutions: Schema.Attribute.JSON;
     tips: Schema.Attribute.JSON;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -600,7 +600,7 @@ export interface ApiSavedRecipeSavedRecipe extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    resipe: Schema.Attribute.Relation<'manyToOne', 'api::resipe.resipe'>;
+    recipe: Schema.Attribute.Relation<'manyToOne', 'api::recipe.recipe'>;
     savedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1104,8 +1104,8 @@ export interface PluginUsersPermissionsUser
       }>;
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    recipes: Schema.Attribute.Relation<'oneToMany', 'api::recipe.recipe'>;
     resetPasswordToken: Schema.Attribute.String & Schema.Attribute.Private;
-    resipes: Schema.Attribute.Relation<'oneToMany', 'api::resipe.resipe'>;
     role: Schema.Attribute.Relation<
       'manyToOne',
       'plugin::users-permissions.role'
@@ -1140,7 +1140,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::pantry-item.pantry-item': ApiPantryItemPantryItem;
-      'api::resipe.resipe': ApiResipeResipe;
+      'api::recipe.recipe': ApiRecipeRecipe;
       'api::saved-recipe.saved-recipe': ApiSavedRecipeSavedRecipe;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

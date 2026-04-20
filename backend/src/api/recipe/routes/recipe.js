@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * resipe router
+ * recipe router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::resipe.resipe');
+module.exports = createCoreRouter('api::recipe.recipe');

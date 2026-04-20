@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "resipes",
+  "collectionName": "recipes",
   "info": {
-    "singularName": "resipe",
-    "pluralName": "resipes",
-    "displayName": "Resipe"
+    "singularName": "recipe",
+    "pluralName": "recipes",
+    "displayName": "Recipe"
   },
   "options": {
     "draftAndPublish": true
@@ -60,8 +60,7 @@
       "required": true
     },
     "instructions": {
-      "type": "json",
-      "required": true
+      "type": "json"
     },
     "imageUrl": {
       "type": "string"
@@ -75,7 +74,7 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "resipes"
+      "inversedBy": "recipes"
     },
     "prepTime": {
       "type": "integer"
@@ -92,14 +91,14 @@
     "tips": {
       "type": "json"
     },
-    "substitution": {
+    "substitutions": {
       "type": "json"
     },
     "saved_recipes": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::saved-recipe.saved-recipe",
-      "mappedBy": "resipe"
+      "mappedBy": "recipe"
     }
   }
 }

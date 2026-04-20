@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * resipe service
+ * recipe service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::resipe.resipe');
+module.exports = createCoreService('api::recipe.recipe');
