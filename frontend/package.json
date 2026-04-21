@@ -32,8 +32,13 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^25.6.0",
+<<<<<<< HEAD
     "@types/react": "^19.2.2",
 
+=======
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+>>>>>>> 7278d51 (updated configs and frontend changes)
     "eslint": "^9",
     "eslint-config-next": "16.2.2",
     "tailwindcss": "^4"
