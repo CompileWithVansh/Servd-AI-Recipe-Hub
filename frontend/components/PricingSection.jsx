@@ -108,7 +108,7 @@ export default function PricingSection({ subscriptionTier = "free" }) {
           <CardFooter>
             <SignedIn>
               <CheckoutButton
-                planId="cplan_37y5uChZ9uYauQyTlDkXDh997ht"
+                planId="cplan_3C8KgCueZ8roZEipf1wWFHQ2a6Z"
                 planPeriod="month"
                 newSubscriptionRedirectUrl="/dashboard"
                 checkoutProps={{
