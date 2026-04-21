@@ -71,6 +71,7 @@ Servd-AI-Recipe-Hub/
 │   ├── next.config.mjs
 │   ├── package.json
 │   └── proxy.js
+│
 ├── backend/
 │   ├── config/
 │   ├── database/
@@ -83,6 +84,7 @@ Servd-AI-Recipe-Hub/
 │   ├── public/
 │   ├── package.json
 │   └── README.md
+│
 └── package-lock.json
 
 ---
